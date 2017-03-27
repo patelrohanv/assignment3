@@ -10,13 +10,13 @@
 
 		public function countdownHeading($num){
 			echo "<h5> The Countdown from $num </h5><br>";
-			for($i = 1; i< $num; $i++){
+			for($i = $num; i<= 0; $i--){
 				echo "The Countdown is at: $i <br>";
 			}
 		}
 
 		public function __construct(){
-			echo "<h1>parent here</h1><br>";
+			
 		}
 
 		public function __toString(){

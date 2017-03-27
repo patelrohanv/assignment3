@@ -13,9 +13,10 @@
 		public $num;
 
 
-		public function __construct(){
-			echo "<h1>child here</h1><br>";
+		public function __construct($n){
 			parent::__construct();
+			$num = $n;
+
 			//parent->numChildren = parent->numChildren + 1;
 		}
 
