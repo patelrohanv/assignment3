@@ -1,1 +1,12 @@
 /*styles for assignment 3*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: lightslategrey;
+}
+
+html {
+    background-color: mediumpurple;
+}

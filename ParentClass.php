@@ -7,18 +7,29 @@
 	*/
 	class ParentClass {
 		public $numChildren = 0;
-		public $thisCount;
 
 		public function countdownHeading($num){
 			echo "<h5> The Countdown from $num </h5><br>";
+			for($i = 1; i< $num; $i++){
+				echo "The Countdown is at: $i <br>";
+			}
 		}
 
-		function __construct($count){
-			$thisCound = $count;
+		public function __construct(){
+			echo "<h1>parent here</h1><br>";
 		}
 
-		function __toString(){
+		public function __toString(){
 			echo "<p> Parent Class with $numChildren Children</p><br>";
+		}
+
+		public function makeForm(){
+			echo "
+			<form action=countdown()>
+				Enter A Number: <br>
+				<input type=\"number\" name=\"count\"><br>
+				<input type=\"submit\"><br>
+			</form>";
 		}
 	}
 ?>

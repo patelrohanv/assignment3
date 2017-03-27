@@ -10,20 +10,24 @@
 	- clone the original object for later use
 	*/
 	class ChildClass extends ParentClass {
+		public $num;
 
-		static $instance;
 
-		function __construct(){
+		public function __construct(){
+			echo "<h1>child here</h1><br>";
 			parent::__construct();
-			parent->numChildren = parent->numChildren + 1;
+			//parent->numChildren = parent->numChildren + 1;
 		}
 
-		function __clone(){
-			this->instance = clone this->instance;
+		public function __clone(){
+			clone this;
 		}
 
-		function countdown($num){
-			echo parent::countdownHeading($num);
+		public function setNum($n){
+			$num = $n;
+		}
+		public function countdown(){
+			parent::countdownHeading($num);
 		}
 	}
 ?>
