@@ -15,7 +15,7 @@
 
 		public function __construct($n){
 			parent::__construct();
-			$num = $n;
+			$this->$num = $n;
 
 			//parent->numChildren = parent->numChildren + 1;
 		}
@@ -25,7 +25,7 @@
 		}
 
 		public function setNum($n){
-			$num = $n;
+			$this->$num = $n;
 		}
 		public function countdown(){
 			parent::countdownHeading($num);
