@@ -10,12 +10,10 @@
 	- clone the original object for later use
 	*/
 	class ChildClass extends ParentClass {
-		public $num;
 
 
 		public function __construct($n){
-			parent::__construct();
-			$this->$num = $n;
+			parent::__construct($n);
 
 			//parent->numChildren = parent->numChildren + 1;
 		}
@@ -28,7 +26,8 @@
 			$this->$num = $n;
 		}
 		public function countdown(){
-			parent::countdownHeading($num);
+			echo "<p> Begin the countdown </p>";
+			parent::countdownHeading();
 		}
 	}
 ?>

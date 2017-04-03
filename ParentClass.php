@@ -7,7 +7,7 @@
 	*/
 	class ParentClass {
 		public $numChildren = 0;
-
+		public $num;
 		public function countdownHeading($num){
 			echo "<h5> The Countdown from $num </h5><br>";
 			for($i = $num; i<= 0; $i--){
@@ -15,8 +15,13 @@
 			}
 		}
 
-		public function __construct(){
-			
+		public function __construct($num){
+			$this->$num = $num;
+		}
+		
+		public function __destruct()
+		{
+			echo get_class($this) . " " .  $this, " being destroyed! <br />";
 		}
 
 		public function __toString(){
